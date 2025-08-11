@@ -206,7 +206,7 @@ const sendContact = () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("/website/sw.js", { scope: "/website/" })
+      .register("/sw.js", { scope: "/" })
       .then((registration) => {
         console.log("Service Worker registrato:", registration.scope);
       })
