@@ -14,7 +14,7 @@ const cookieStorage = {
 };
 
 const storageType = cookieStorage;
-const consentPropertyName = "IntimoGavini_HelloCookie";
+const consentPropertyName = "BeaCasaVacanze_HelloCookie";
 const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
 const saveToStorage = () => storageType.setItem(consentPropertyName, "true");
 

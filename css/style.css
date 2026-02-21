@@ -140,7 +140,7 @@ header {
   left: 0;
   width: 100%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem 9%;
+  padding: 2rem 4%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -155,9 +155,11 @@ header .logo {
   font-size: 2rem;
   color: var(--red);
   height: auto;
-  max-height: 5vh; /* oppure 100px, da adattare */
+  max-height: 8vh; /* oppure 100px, da adattare */
   object-fit: contain;
   display: block;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem; /* Aggiunta di margin oppure paddinginferiore per evitare sovrapposizione con il testo */
 }
 
 header .logo span {
@@ -197,7 +199,7 @@ header label {
   left: 0;
   right: 0;
   width: 100%;
-  height: 60px;
+  height: 9vh;
   box-shadow: 0px 5px 0px rgba(0, 0, 0, 0);
   transition: box-shadow 500ms;
 }
@@ -567,7 +569,7 @@ img {
 .about .column .content p {
   font-size: 1.8rem;
   color: var(--white);
-  padding: 1rem 10rem;
+  padding: 1rem 4rem;
 }
 
 .buttons {
@@ -581,7 +583,7 @@ img {
   color: var(--white);
   font-size: 7rem;
   line-height: 6.5rem;
-  padding: 0 10rem 2rem 10rem;
+  padding: 0 5rem 2rem 5rem;
 }
 
 /**
@@ -909,7 +911,7 @@ input #phone {
   }
 
   .nav-links a {
-    font-size: 1.8rem;
+    font-size: 2vh;
     letter-spacing: 1px;
   }
 
@@ -994,282 +996,45 @@ input #phone {
   }
 }
 
+/* ==============================
+   MOBILE / TABLET BREAKPOINTS
+   Burger menu visibile fino a 765px
+   ============================== */
+
+/* Base mobile: fino a 765px */
 @media (max-width: 765px) {
-  html {
-    font-size: 35%;
-  }
+  html { font-size: 28%; }
 
-  .about .column .content p {
-    padding: 2rem;
-    font-size: 2rem;
-  }
-
-  .about .column .heading {
-    padding: 0 2rem 2rem 2rem;
-  }
-
-  .buttons {
-    margin-left: 2rem;
-  }
-
-  #wedo .buttons {
-    margin-right: 2rem;
-  }
-  .text {
-    /* color: purple; */
-    top: 40%;
-    padding: 0;
-    width: 40%;
-  }
-
-  .nav-links {
-    width: 50%;
-  }
-
-  .home {
-    flex-flow: column-reverse;
-  }
-
-  .home .image img {
-    width: 100%;
-  }
-
-  .home .content p {
-    font-size: 2rem;
-  }
-
-  .home .content .text p {
-    font-size: 2rem;
-  }
-
-  .mySlides {
-    height: 85rem;
-  }
-
-  .mySlides img {
-    min-height: 90%;
-  }
-
+  /* Layout generale */
+  .about .column .content p { padding: 2rem; font-size: 2rem; }
+  .about .column .heading { padding: 0 2rem 2rem 2rem; }
+  .buttons { margin-left: 2rem; }
+  #wedo .buttons { margin-right: 2rem; }
+  .text { top: 40%; padding: 0; width: 40%; }
+  .nav-links { width: 50%; }
+  .home { flex-flow: column-reverse; }
+  .home .image img { width: 100%; }
+  .home .content p,
+  .home .content .text p { font-size: 2rem; }
+  .mySlides { height: 85rem; }
+  .mySlides img { min-height: 90%; }
   .input,
-  .msg .area {
-    padding: 2rem;
-    margin-bottom: 2rem;
-  }
+  .msg .area { padding: 2rem; margin-bottom: 2rem; }
+  form { max-width: 50rem; }
+  .contact .column .heading { padding-right: 0; }
+  #accept { padding: 2.7rem 6rem; font-size: 3rem; }
+  #consent-popup { font-size: 2.6rem; padding: 1rem 1rem; }
+  .container-ajx { font-size: 1.51rem; max-width: 100%; padding: 1rem; padding-top: 5rem; }
+  #update { font-size: 2rem; }
+  .flex-ajx { margin: auto 0rem 8rem; }
+  .mainajx { height: 45rem; }
+  .contact .column .content p { padding-bottom: 10rem; font-size: 2.2rem; }
+  .card .box-container .box .box-text { margin: 2rem; }
 
-  form {
-    max-width: 50rem;
-  }
-
-  .contact .column .heading {
-    padding-right: 0;
-  }
-
-  #accept {
-    padding: 2.7rem 6rem;
-    font-size: 3rem;
-  }
-
-  #consent-popup {
-    font-size: 2.6rem;
-    padding: 1rem 1rem;
-  }
-
-  .container-ajx {
-    font-size: 1.51rem;
-    max-width: 100%;
-    padding: 1rem;
-    padding-top: 5rem;
-  }
-
-  #update {
-    font-size: 2rem;
-  }
-
-  .flex-ajx {
-    margin: auto 0rem 8rem;
-  }
-
-  .mainajx {
-    height: 45rem;
-  }
-
-  .contact .column .content p {
-    padding-bottom: 10rem;
-    font-size: 2.2rem;
-  }
-  .card .box-container .box .box-text {
-    margin: 2rem;
-  }
-}
-
-@media (max-width: 540px) {
-  .text {
-    /* color: orange; */
-    top: 30%;
-  }
-
-  .home .image img {
-    height: 62rem;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 50%;
-  }
-
-  .text {
-    /* color: rgb(0, 204, 255); */
-    text-align: center;
-    top: 27%;
-    width: fit-content;
-  }
-
-  .card .box-container .box {
-    flex: 1 1 28rem;
-  }
-
-  /* .about .column .content .buttons a {
-    width: 100%;
-    text-align: center;
-  } */
-
-  /* .about .column .content .buttons a:last-child {
-    margin: 1rem 0;
-  } */
-
-  .about .column .heading {
-    padding-left: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 2rem;
-    height: 11rem;
-    text-align: center;
-    margin-top: 4rem;
-  }
-
-  .mySlides img {
-    min-height: 90%;
-  }
-  .box-circles {
-    display: none;
-  }
-
-  .contact .column {
-    margin-top: 3rem;
-  }
-
-  .contact .column .heading {
-    text-align: left;
-    color: transparent;
-    color: var(--white);
-    line-height: 6.5rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    height: 5rem;
-  }
-
-  .contact .column .content p {
-    padding-bottom: 5rem;
-    padding-top: 1.5rem;
-  }
-
-  .about .column .content p {
-    text-align: center;
-    padding: 5rem 10rem;
-    line-height: 3rem;
-  }
-
-  .card .box-container .box {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .container {
-    width: 100%;
-  }
-
-  .mySlides {
-    height: 100rem;
-  }
-
-  .container-ajx {
-    max-width: 90%;
-    padding: 0.5rem;
-    background-color: white;
-    padding-bottom: 12rem;
-    font-size: 1.6rem;
-  }
-
-  .flex-ajx {
-    flex-direction: column;
-    margin-top: 10rem;
-    text-align: center;
-  }
-
-  .about .column {
-    flex-direction: column;
-  }
-
-  .about .column .content p {
-    font-size: 2.4rem;
-  }
-
-  .about #wedo {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  #wedo .heading,
-  #wedo p,
-  #wedo .btn {
-    text-align: center;
-    width: 100%;
-  }
-
-  #wedo .buttons,
-  .buttons {
-    width: 80%;
-    align-items: center;
-    margin: 0 auto 2rem;
-  }
-
-  .about .column .image img {
-    width: 100%;
-    height: 60rem;
-    object-fit: cover;
-    border: yellow;
-  }
-
-  .footer .box-container .nav-footer li {
-    font-size: 1.7rem;
-  }
-
-  .footer .box-container .socials li {
-    font-size: 2rem;
-    padding-bottom: 1rem;
-  }
-
-  #wedo .column .image,
-  .about .column .image {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-
-  #accept {
-    padding: 1.5rem 2.6rem;
-    font-size: 1.8rem;
-  }
-
-  #consent-popup {
-    font-size: 1.6rem;
-    text-align: justify;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
+  /* ==============================
+     BURGER MENU / NAV
+     ============================== */
+  #navbar .burger { display: block; cursor: pointer; }
 
   .nav-links {
     position: absolute;
@@ -1290,151 +1055,108 @@ input #phone {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   }
 
-  .nav-links a {
-    color: var(--grey);
-  }
+  .nav-links a { color: var(--grey); }
+  .nav-links li { opacity: 0; }
 
-  .nav-links li {
-    opacity: 0;
-  }
+  .nav-active { transform: translateX(0%); }
 
-  #navbar .burger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: black;
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-    background-color: black;
-  }
+  .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); background-color: black; }
+  .toggle .line2 { opacity: 0; }
+  .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); background-color: black; }
 }
 
-@media (max-width: 375px) {
-  html {
-    font-size: 50%;
-  }
+/* ------------------------------
+   MEDIA QUERY SPECIFICHE FINO A 480PX
+   Si estendono automaticamente dal max-width: 765px
+--------------------------------*/
+@media (max-width: 540px) {
+  .text { top: 30%; }
+  .home .image img { height: 62rem; }
+}
 
-  .text {
-    /* color: olive; */
-    top: 27%;
-  }
+@media (max-width: 480px) {
+  html { font-size: 50%; }
+  .text { text-align: center; top: 27%; width: fit-content; }
 
-  .mySlides img {
-    min-height: 92%;
-  }
+  .card .box-container .box { flex: 1 1 28rem; }
 
-  .mySlides {
-    height: 83rem;
-  }
-
-  .about .column .image img {
-    height: 37rem;
-  }
-  .about .column .content p {
-    padding: 5rem 8rem;
-    font-size: 2.4rem;
-  }
   .about .column .heading {
-    margin-top: 10rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    height: 9rem;
+    text-align: center;
+    margin-top: 6rem;
   }
 
-  .contact .column .content p {
-    padding-bottom: 4rem;
-  }
-
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: black;
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-    background-color: black;
-  }
-
-  .home .content p {
-    font-size: 2.3rem;
-  }
-
-  #load-1,
-  #load-2,
-  #load-3 {
-    font-size: 2.2rem;
-  }
-
-  .nav-links a {
-    font-size: 2rem;
-  }
-
-  #consent-popup {
-    font-size: 1.8rem;
-  }
-
-  #accept {
-    padding: 1.3rem 2rem;
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 320px) {
-  html {
-    font-size: 40%;
-  }
-
-  .text {
-    /* color: orchid; */
-    top: 25%;
-  }
-
+  .box-circles { display: none; }
+  .contact .column { margin-top: 3rem; }
   .contact .column .heading {
-    padding-left: 3rem;
+    text-align: left;
+    color: var(--white);
+    line-height: 6.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    height: 5rem;
   }
 
-  .about .column .content p {
-    padding: 5rem 6rem;
-  }
+  .contact .column .content p { padding-bottom: 5rem; padding-top: 1.5rem; }
+  .about .column .content p { text-align: center; padding: 1rem 6rem; line-height: 3rem; }
+  .card .box-container .box { margin-right: 0; margin-left: 0; }
+  .container { width: 100%; }
+  .mySlides { height: 100rem; }
 
-  .contact .column .content p {
-    margin-left: 17rem;
-  }
+  .container-ajx { max-width: 90%; padding: 0.5rem; background-color: white; padding-bottom: 12rem; font-size: 1.6rem; }
+  .flex-ajx { flex-direction: column; margin-top: 10rem; text-align: center; }
+  .about .column { flex-direction: column; }
+  .about .column .content p { font-size: 2.4rem; }
 
-  #accept {
-    font-size: 1.5rem;
-  }
-
-  .card .box-container {
-    padding: 3rem;
-  }
+  .about #wedo { flex-direction: column; align-items: center; text-align: center; width: 100%; }
+  #wedo .heading, #wedo p, #wedo .btn { text-align: center; width: 100%; }
+  #wedo .buttons, .buttons { width: 80%; align-items: center; margin: 0 auto 2rem; }
+  .about .column .image img { width: 100%; height: 60rem; object-fit: cover; border: yellow; }
+  #wedo .column .image, .about .column .image { flex: 0 0 auto; width: 100%; }
+  #accept { padding: 1.5rem 2.6rem; font-size: 1.8rem; }
+  #consent-popup { font-size: 1.6rem; text-align: justify; }
+  body { overflow-x: hidden; }
 }
 
+/* ------------------------------
+   MEDIA QUERY FINO A 375PX
+--------------------------------*/
+@media (max-width: 375px) {
+  html { font-size: 50%; }
+  .text { top: 27%; }
+  .mySlides img { min-height: 92%; }
+  .mySlides { height: 83rem; }
+  .about .column .image img { height: 37rem; }
+  .about .column .content p { padding: 1rem 3rem; font-size: 2.4rem; }
+  .about .column .heading { margin-top: 10rem; }
+  .contact .column .content p { padding-bottom: 4rem; }
+  .home .content p { font-size: 2.3rem; }
+  #load-1, #load-2, #load-3 { font-size: 2.2rem; }
+  .nav-links a { font-size: 2rem; }
+  #consent-popup { font-size: 1.8rem; }
+  #accept { padding: 1.3rem 2rem; font-size: 2rem; }
+}
+
+/* ------------------------------
+   MEDIA QUERY FINO A 320PX
+--------------------------------*/
+@media (max-width: 320px) {
+  html { font-size: 40%; }
+  .text { top: 25%; }
+  .contact .column .heading { padding-left: 3rem; }
+  .about .column .content p { padding: 5rem 6rem; }
+  .contact .column .content p { margin-left: 17rem; }
+  #accept { font-size: 1.5rem; }
+  .card .box-container { padding: 3rem; }
+}
+
+/* ==============================
+   ANIMAZIONE NAV LINKS
+   ============================== */
 @keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0px); }
 }

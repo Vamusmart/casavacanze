@@ -6,11 +6,11 @@ const ASSETS_TO_CACHE = [
     "/images/banner-we-are-1440.webp",
     "/images/slide-hello-1440.webp",
     "/images/banner-we-do-1440.webp",
-    "/images/shop_intimo.webp",
+    "/images/close-up-iacuzzi.webp",
     "/images/card-simplicity.webp",
     "/images/card-play-harder.webp",
     "/images/card-innovation.webp",
-    "/images/logo-intimo-white.webp"
+    "/images/logo-villa-white.webp"
 ];
 
 // Installazione: cache degli asset
